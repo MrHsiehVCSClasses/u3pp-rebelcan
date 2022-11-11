@@ -15,7 +15,7 @@ public class Blackjack {
         dealerHand = new Card[0];
         name = n;
     }
-
+//add method to add new card onto userHand and dealerHand later
     private Card[] addCard(Card[] hand) {
         
         int n = hand.length;
@@ -29,7 +29,7 @@ public class Blackjack {
         return newHand;
         
     }
-
+//print card method
     private String printCards(Card[] hand) {
 
         String cards = "";
@@ -41,7 +41,7 @@ public class Blackjack {
 
         return cards.substring(0, cards.length() - 3);
     }
-
+//actual gameplay
     public void play (Scanner scanner) {
         
         boolean keepPlaying = true;
@@ -68,7 +68,7 @@ public class Blackjack {
             keepPlaying = false;
             gameNotOver = false;
         }
-
+        //takes in user input to see if they want to continue playing. if hit, must check again to see if user busts. if stay, change boolean to false. 
         while (keepPlaying) {
             System.out.print("Would you like to (H)it or (S)tay?: ");
             String hitOrStand = scanner.nextLine();
@@ -110,7 +110,7 @@ public class Blackjack {
 
         }
         
-        
+        //checks if user wants to continue playing by making another boolean and taking user input
         Boolean goAgain = true;
         
         while(goAgain) {
